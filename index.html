@@ -73,16 +73,43 @@ footer strong{color:#fff}
  .hero h1{font-size:38px}.about,.forms,.map-wrap{grid-template-columns:1fr}
  .services,.gallery{grid-template-columns:1fr 1fr}
 }
-@media(max-width:520px){.services,.gallery{grid-template-columns:1fr}.hero{min-height:540px}.brand span{font-size:17px}}
+@media(max-width:520px){.services,.gallery{grid-template-columns:1fr}.hero{min-height:540px}.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:white;
+  font-weight:800;
+}
+
+.brand img{
+  width:65px;
+  height:65px;
+  object-fit:contain;
+}
+
+.brand span{
+  font-size:20px;
+  display:block;
+}
+
+.brand small{
+  display:block;
+  color:#9fc9ff;
+  font-weight:500;
+  font-size:11px;
+}
 </style>
 </head>
 <body>
 
 <header>
- <div class="nav">
-  <a class="brand" href="#home">
-   <img src="images/logo.png" alt="KP Enterprises Logo">
-   <span>KP Enterprises<small>ATS CENTRE • VALUE-DRIVEN</small></span>
+ <div class="brand">
+  <img src="logo.png" alt="KP Enterprises Logo">
+  <div>
+    <span>KP Enterprises</span>
+    <small>ATS CENTRE • VALUE-DRIVEN</small>
+  </div>
+</div>
   </a>
   <div class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</div>
   <nav>
