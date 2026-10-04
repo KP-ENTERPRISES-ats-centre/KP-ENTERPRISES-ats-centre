@@ -359,476 +359,378 @@ section:not(.hero) {
 }
 
 
-/* =========================
-   JOB CARD
-========================= */
+/* =========================<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-#jobcard {
-    background: #0b1b27;
+<title>KP Enterprises | ATS Centre</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.job-box {
-    max-width: 900px;
-    margin: auto;
-
-    padding: 45px;
-
-    background: #102736;
-    border-radius: 12px;
+html{
+    scroll-behavior:smooth;
 }
 
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#06141e;
+    color:white;
 }
 
-.form-group {
-    margin-bottom: 20px;
+/* ================= HEADER ================= */
+
+header{
+    height:120px;
+    width:100%;
+    background:#06141e;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 55px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
+/* LOGO AREA */
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 14px;
-
-    background: #071722;
-    color: white;
-
-    border: 1px solid #294353;
-    border-radius: 5px;
-
-    outline: none;
+.brand img{
+    width:140px;
+    height:90px;
+    object-fit:contain;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: #079cff;
+.brand-text span{
+    display:block;
+    font-size:30px;
+    font-weight:800;
+    color:#ffffff;
 }
 
-.form-group textarea {
-    min-height: 120px;
-    resize: vertical;
+.brand-text small{
+    display:block;
+    margin-top:5px;
+    font-size:14px;
+    color:#00aaff;
+    font-weight:600;
 }
 
-.submit-btn {
-    width: 100%;
-    border: none;
-    padding: 16px;
+/* NAVIGATION */
 
-    background: #079cff;
-    color: white;
-
-    font-size: 17px;
-    font-weight: 700;
-
-    border-radius: 5px;
-    cursor: pointer;
+nav{
+    display:flex;
+    align-items:center;
+    gap:32px;
 }
 
-.submit-btn:hover {
-    background: #007dcc;
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    padding:15px 0;
+    transition:0.3s;
 }
 
-
-/* =========================
-   DOCUMENTS
-========================= */
-
-#documents {
-    background: #06131d;
+nav a:hover{
+    color:#00aaff;
 }
 
-.documents {
-    max-width: 1000px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+nav a.active{
+    color:#00aaff;
+    border-bottom:3px solid #00aaff;
 }
 
-.document-card {
-    padding: 30px;
-    background: #0d202e;
-    border-radius: 8px;
-    text-align: center;
+/* ================= HERO ================= */
+
+.hero{
+    min-height:calc(100vh - 120px);
+    display:grid;
+    grid-template-columns:52% 48%;
+    background:#06141e;
 }
 
-.document-card h3 {
-    margin-bottom: 10px;
+/* LEFT CONTENT */
+
+.hero-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:70px;
+    position:relative;
+    z-index:2;
 }
 
-.document-card p {
-    color: #b9c5cc;
+.hero-content h1{
+    font-size:65px;
+    line-height:1.05;
+    font-weight:800;
+    margin-bottom:30px;
 }
 
-
-/* =========================
-   GALLERY
-========================= */
-
-#gallery {
-    background: #0b1b27;
+.hero-content h1 .blue{
+    color:#00aaff;
 }
 
-.gallery {
-    max-width: 1200px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.hero-content p{
+    font-size:20px;
+    line-height:1.7;
+    color:#e1e8ed;
+    max-width:720px;
+    margin-bottom:35px;
 }
 
-.gallery img {
-    width: 100%;
-    height: 240px;
+/* BUTTONS */
 
-    object-fit: cover;
-    border-radius: 8px;
-
-    transition: 0.3s;
+.buttons{
+    display:flex;
+    gap:18px;
 }
 
-.gallery img:hover {
-    transform: scale(1.03);
+.btn{
+    padding:18px 30px;
+    border-radius:7px;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:700;
+    transition:0.3s;
 }
 
-
-/* =========================
-   CONTACT
-========================= */
-
-#contact {
-    background: #06131d;
+.btn-primary{
+    background:#009cff;
+    color:white;
 }
 
-.contact-box {
-    max-width: 900px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.btn-primary:hover{
+    background:#007fd0;
+    transform:translateY(-2px);
 }
 
-.contact-card {
-    padding: 30px;
-    text-align: center;
-
-    background: #0d202e;
-    border-radius: 10px;
+.btn-outline{
+    border:2px solid white;
+    color:white;
 }
 
-.contact-card h3 {
-    margin-bottom: 12px;
+.btn-outline:hover{
+    background:white;
+    color:#06141e;
 }
 
-.contact-card p {
-    color: #b9c5cc;
-    line-height: 1.6;
+/* ================= HERO IMAGE ================= */
+
+.hero-image{
+    position:relative;
+    min-height:650px;
+    overflow:hidden;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    padding: 30px;
-    text-align: center;
-
-    background: #030b11;
-    color: #9daab2;
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
-footer strong {
-    color: white;
+/* Dark gradient on image edge */
+
+.hero-image::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:25%;
+    height:100%;
+    z-index:1;
+    background:linear-gradient(
+        to right,
+        #06141e,
+        transparent
+    );
 }
 
+/* ================= SECTIONS ================= */
 
-/* =========================
-   MOBILE MENU
-========================= */
-
-.menu-btn {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
+section{
+    padding:90px 70px;
 }
 
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:20px;
+}
 
-/* =========================
-   RESPONSIVE
-========================= */
+.section-title span{
+    color:#00aaff;
+}
 
-@media (max-width: 1100px) {
+.section-text{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    color:#cbd5dc;
+    font-size:18px;
+    line-height:1.7;
+}
 
-    .navbar {
-        padding: 0 25px;
+/* ================= MOBILE ================= */
+
+@media(max-width:1000px){
+
+    header{
+        height:auto;
+        padding:20px 25px;
+        flex-direction:column;
+        gap:20px;
     }
 
-    .nav-menu {
-        gap: 18px;
+    .brand img{
+        width:100px;
+        height:65px;
     }
 
-    .hero-content {
-        padding-left: 45px;
+    .brand-text span{
+        font-size:23px;
     }
 
-    .hero-content h1 {
-        font-size: 48px;
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
     }
 
-    .brand img {
-        width: 85px;
+    nav a{
+        font-size:14px;
     }
 
-    .brand-text strong {
-        font-size: 22px;
-    }
-}
-
-
-@media (max-width: 850px) {
-
-    header {
-        height: 90px;
+    .hero{
+        grid-template-columns:1fr;
     }
 
-    .navbar {
-        height: 90px;
+    .hero-content{
+        padding:60px 30px;
+        order:1;
     }
 
-    .brand img {
-        width: 70px;
-        height: 65px;
+    .hero-image{
+        min-height:400px;
+        order:2;
     }
 
-    .brand-text strong {
-        font-size: 20px;
+    .hero-content h1{
+        font-size:45px;
     }
 
-    .brand-text small {
-        font-size: 10px;
+    .hero-content p{
+        font-size:17px;
     }
 
-    .menu-btn {
-        display: block;
-    }
-
-    .nav-menu {
-        display: none;
-        position: absolute;
-
-        top: 90px;
-        left: 0;
-        right: 0;
-
-        padding: 20px;
-
-        background: #06131d;
-
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .nav-menu.show {
-        display: flex;
-    }
-
-    .nav-menu a {
-        padding: 15px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero {
-        flex-direction: column;
-    }
-
-    .hero-content {
-        width: 100%;
-        padding: 70px 30px;
-    }
-
-    .hero-image {
-        width: 100%;
-        min-height: 450px;
-    }
-
-    .services,
-    .documents,
-    .gallery,
-    .contact-box {
-        grid-template-columns: 1fr;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
+    section{
+        padding:60px 30px;
     }
 }
 
+@media(max-width:600px){
 
-@media (max-width: 500px) {
-
-    .brand-text small {
-        display: none;
+    .brand{
+        width:100%;
+        justify-content:center;
     }
 
-    .hero-content h1 {
-        font-size: 40px;
+    nav{
+        gap:12px;
     }
 
-    .hero-content p {
-        font-size: 17px;
+    nav a{
+        font-size:13px;
     }
 
-    .hero-buttons {
-        flex-direction: column;
+    .hero-content h1{
+        font-size:38px;
     }
 
-    .btn {
-        text-align: center;
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
     }
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
-<nav class="navbar">
+    <div class="brand">
 
-    <a href="#home" class="brand">
-
-        <img src="logo.png"
-             alt="KP Enterprises Logo">
+        <img src="logo.png" alt="KP Enterprises Logo">
 
         <div class="brand-text">
-
-            <strong>KP Enterprises</strong>
-
-            <small>
-                ATS CENTRE • VALUE-DRIVEN
-            </small>
-
+            <span>KP Enterprises</span>
+            <small>ATS CENTRE - VALUE DRIVEN</small>
         </div>
 
-    </a>
-
-
-    <div class="menu-btn" onclick="toggleMenu()">
-        ☰
     </div>
 
-
-    <div class="nav-menu" id="navMenu">
-
-        <a href="#home" class="active">
-            Home
-        </a>
-
-        <a href="#about">
-            About Company
-        </a>
-
-        <a href="#testing">
-            Vehicle Testing
-        </a>
-
-        <a href="#jobcard">
-            Job Card
-        </a>
-
-        <a href="#documents">
-            Documents
-        </a>
-
-        <a href="#gallery">
-            Gallery
-        </a>
-
-        <a href="#contact">
-            Contact
-        </a>
-
-    </div>
-
-</nav>
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About Company</a>
+        <a href="#testing">Vehicle Testing</a>
+        <a href="#jobcard">Job Card</a>
+        <a href="#documents">Documents</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
 </header>
 
 
-
-<!-- =========================
-     HOME / HERO
-========================= -->
+<!-- ================= HOME ================= -->
 
 <section class="hero" id="home">
-
 
     <div class="hero-content">
 
         <h1>
-
-            Professional
-
-            <br>
-
-            <span class="blue">
-                Vehicle Testing
-            </span>
-
-            <br>
-
+            Professional<br>
+            <span class="blue">Vehicle Testing</span><br>
             & Inspection Services
-
         </h1>
 
-
         <p>
-
-            Welcome to <strong>KP Enterprises – ATS Centre.</strong>
+            Welcome to <b>KP Enterprises - ATS Centre.</b>
             We provide convenient, reliable and customer-focused
-            vehicle testing and inspection services near
-            Annangi, Andhra Pradesh.
-
+            vehicle testing and inspection services near Annangi,
+            Andhra Pradesh.
         </p>
 
+        <div class="buttons">
 
-        <div class="hero-buttons">
-
-            <a href="#jobcard"
-               class="btn btn-primary">
-
+            <a href="#jobcard" class="btn btn-primary">
                 Create Job Card
-
             </a>
 
-
-            <a href="#contact"
-               class="btn btn-outline">
-
+            <a href="#contact" class="btn btn-outline">
                 Contact Us
-
             </a>
 
         </div>
@@ -836,499 +738,110 @@ footer strong {
     </div>
 
 
+    <!-- RIGHT SIDE IMAGE -->
 
     <div class="hero-image">
 
-    </div>
+        <img src="ats-centre.jpg"
+             alt="KP Enterprises ATS Centre">
 
+    </div>
 
 </section>
 
 
-
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
-    <div class="section-title">
+    <h2 class="section-title">
+        About <span>KP Enterprises</span>
+    </h2>
 
-        <h2>
-            About <span>KP Enterprises</span>
-        </h2>
-
-        <p>
-            Professional and reliable vehicle testing services
-        </p>
-
-    </div>
-
-
-    <div class="about-content">
-
-        <p>
-
-            KP Enterprises – ATS Centre is committed to providing
-            professional vehicle testing and inspection services.
-            Our focus is on reliable testing, customer convenience,
-            transparency and quality service.
-
-        </p>
-
-    </div>
+    <p class="section-text">
+        KP Enterprises - ATS Centre provides professional vehicle
+        testing and inspection services with a focus on reliability,
+        convenience and customer satisfaction.
+    </p>
 
 </section>
 
 
-
-<!-- =========================
-     VEHICLE TESTING
-========================= -->
+<!-- ================= VEHICLE TESTING ================= -->
 
 <section id="testing">
 
-    <div class="section-title">
+    <h2 class="section-title">
+        Vehicle <span>Testing</span>
+    </h2>
 
-        <h2>
-            Vehicle <span>Testing Services</span>
-        </h2>
-
-        <p>
-            Reliable testing and inspection facilities
-        </p>
-
-    </div>
-
-
-    <div class="services">
-
-
-        <div class="service-card">
-
-            <div class="icon">
-                🚗
-            </div>
-
-            <h3>
-                Vehicle Inspection
-            </h3>
-
-            <p>
-                Professional vehicle inspection and
-                testing services.
-            </p>
-
-        </div>
-
-
-
-        <div class="service-card">
-
-            <div class="icon">
-                🔧
-            </div>
-
-            <h3>
-                Vehicle Testing
-            </h3>
-
-            <p>
-                Reliable testing facilities for vehicles
-                with proper inspection procedures.
-            </p>
-
-        </div>
-
-
-
-        <div class="service-card">
-
-            <div class="icon">
-                📋
-            </div>
-
-            <h3>
-                Inspection Reports
-            </h3>
-
-            <p>
-                Clear and organized vehicle testing
-                and inspection reports.
-            </p>
-
-        </div>
-
-
-    </div>
+    <p class="section-text">
+        Professional vehicle testing and inspection services
+        using reliable testing procedures and equipment.
+    </p>
 
 </section>
 
 
-
-<!-- =========================
-     JOB CARD
-========================= -->
+<!-- ================= JOB CARD ================= -->
 
 <section id="jobcard">
 
-    <div class="section-title">
+    <h2 class="section-title">
+        Create <span>Job Card</span>
+    </h2>
 
-        <h2>
-            Create <span>Job Card</span>
-        </h2>
-
-        <p>
-            Enter vehicle details to create a job card
-        </p>
-
-    </div>
-
-
-    <div class="job-box">
-
-        <form onsubmit="submitJob(event)">
-
-
-            <div class="form-row">
-
-
-                <div class="form-group">
-
-                    <label>
-                        Customer Name
-                    </label>
-
-                    <input type="text"
-                           placeholder="Enter customer name"
-                           required>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        Mobile Number
-                    </label>
-
-                    <input type="tel"
-                           placeholder="Enter mobile number"
-                           required>
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="form-row">
-
-
-                <div class="form-group">
-
-                    <label>
-                        Vehicle Number
-                    </label>
-
-                    <input type="text"
-                           placeholder="AP XX XX XXXX"
-                           required>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        Vehicle Type
-                    </label>
-
-                    <select required>
-
-                        <option value="">
-                            Select Vehicle
-                        </option>
-
-                        <option>
-                            Car
-                        </option>
-
-                        <option>
-                            Auto
-                        </option>
-
-                        <option>
-                            Truck
-                        </option>
-
-                        <option>
-                            Bus
-                        </option>
-
-                        <option>
-                            Other
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="form-group">
-
-                <label>
-                    Remarks
-                </label>
-
-                <textarea
-                    placeholder="Enter vehicle / testing details">
-                </textarea>
-
-            </div>
-
-
-            <button type="submit"
-                    class="submit-btn">
-
-                Create Job Card
-
-            </button>
-
-
-        </form>
-
-    </div>
+    <p class="section-text">
+        Create and manage vehicle testing job cards easily.
+    </p>
 
 </section>
 
 
-
-<!-- =========================
-     DOCUMENTS
-========================= -->
+<!-- ================= DOCUMENTS ================= -->
 
 <section id="documents">
 
-    <div class="section-title">
+    <h2 class="section-title">
+        <span>Documents</span>
+    </h2>
 
-        <h2>
-            Important <span>Documents</span>
-        </h2>
-
-        <p>
-            Vehicle testing related documents
-        </p>
-
-    </div>
-
-
-    <div class="documents">
-
-
-        <div class="document-card">
-
-            <h3>
-                RC Documents
-            </h3>
-
-            <p>
-                Vehicle registration related documents.
-            </p>
-
-        </div>
-
-
-        <div class="document-card">
-
-            <h3>
-                Insurance
-            </h3>
-
-            <p>
-                Vehicle insurance documentation.
-            </p>
-
-        </div>
-
-
-        <div class="document-card">
-
-            <h3>
-                Testing Documents
-            </h3>
-
-            <p>
-                Vehicle testing and inspection documents.
-            </p>
-
-        </div>
-
-
-    </div>
+    <p class="section-text">
+        Access important vehicle testing documents and records.
+    </p>
 
 </section>
 
 
-
-<!-- =========================
-     GALLERY
-========================= -->
+<!-- ================= GALLERY ================= -->
 
 <section id="gallery">
 
-    <div class="section-title">
+    <h2 class="section-title">
+        Photo <span>Gallery</span>
+    </h2>
 
-        <h2>
-            Our <span>Gallery</span>
-        </h2>
-
-        <p>
-            KP Enterprises ATS Centre
-        </p>
-
-    </div>
-
-
-    <div class="gallery">
-
-        <img src="ats-centre.jpg"
-             alt="ATS Centre">
-
-        <img src="ats-centre.jpg"
-             alt="Vehicle Testing">
-
-        <img src="ats-centre.jpg"
-             alt="Vehicle Inspection">
-
-    </div>
+    <p class="section-text">
+        View KP Enterprises ATS Centre vehicle testing activities.
+    </p>
 
 </section>
 
 
-
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- ================= CONTACT ================= -->
 
 <section id="contact">
 
-    <div class="section-title">
+    <h2 class="section-title">
+        Contact <span>Us</span>
+    </h2>
 
-        <h2>
-            Contact <span>Us</span>
-        </h2>
-
-        <p>
-            Get in touch with KP Enterprises
-        </p>
-
-    </div>
-
-
-    <div class="contact-box">
-
-
-        <div class="contact-card">
-
-            <h3>
-                📍 Location
-            </h3>
-
-            <p>
-                Annangi, Andhra Pradesh
-            </p>
-
-        </div>
-
-
-        <div class="contact-card">
-
-            <h3>
-                📞 Phone
-            </h3>
-
-            <p>
-                +91 XXXXX XXXXX
-            </p>
-
-        </div>
-
-
-        <div class="contact-card">
-
-            <h3>
-                ✉ Email
-            </h3>
-
-            <p>
-                Contact KP Enterprises
-            </p>
-
-        </div>
-
-
-    </div>
+    <p class="section-text">
+        KP Enterprises - ATS Centre<br>
+        Annangi, Andhra Pradesh
+    </p>
 
 </section>
 
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    © 2026
-    <strong>KP Enterprises – ATS Centre</strong>.
-    All Rights Reserved.
-
-</footer>
-
-
-
-<script>
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-function toggleMenu() {
-
-    document
-        .getElementById("navMenu")
-        .classList
-        .toggle("show");
-
-}
-
-
-/* =========================
-   JOB CARD
-========================= */
-
-function submitJob(event) {
-
-    event.preventDefault();
-
-    alert(
-        "Job Card request submitted successfully!"
-    );
-
-}
-
-</script>
-
-
-</body>
-</html>
-}
-</script>
 </body>
 </html>
