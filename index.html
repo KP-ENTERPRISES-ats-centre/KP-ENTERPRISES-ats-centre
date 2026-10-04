@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KP Enterprises | ATS Centre</title>
+<meta name="description" content="KP Enterprises ATS Centre - Vehicle Testing and Inspection Services near Annangi, Andhra Pradesh.">
+<style>
+:root{
+  --blue:#087ff5; --dark:#07101d; --red:#ed1c24; --yellow:#ffc400;
+  --light:#f5f8fc; --text:#172033; --muted:#667085; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--light);line-height:1.6}
+a{text-decoration:none}
+header{position:sticky;top:0;z-index:1000;background:rgba(7,16,29,.97);box-shadow:0 3px 15px rgba(0,0,0,.2)}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+.brand{display:flex;align-items:center;gap:12px;color:white;font-weight:800}
+.brand img{width:58px;height:58px;object-fit:contain}
+.brand span{font-size:20px}
+.brand small{display:block;color:#9fc9ff;font-weight:500;font-size:11px}
+nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav a{color:#fff;font-size:14px;font-weight:700}
+nav a:hover{color:#4da3ff}
+.menu{display:none;color:#fff;font-size:28px;cursor:pointer}
+.hero{min-height:590px;display:flex;align-items:center;background:
+linear-gradient(90deg,rgba(7,16,29,.93),rgba(7,16,29,.66),rgba(7,16,29,.35)),
+url('images/logo.png') center/520px no-repeat,#05070a;padding:70px 20px}
+.hero-inner{max-width:1200px;width:100%;margin:auto}
+.hero h1{color:#fff;font-size:52px;line-height:1.1;max-width:720px}
+.hero h1 span{color:var(--blue)}
+.hero p{color:#d8e3f0;max-width:650px;font-size:19px;margin:20px 0 28px}
+.btn{display:inline-block;padding:13px 22px;border-radius:7px;font-weight:800;margin-right:8px}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-outline{border:1px solid #fff;color:#fff}
+section{padding:75px 20px}
+.container{max-width:1200px;margin:auto}
+.title{text-align:center;margin-bottom:40px}
+.title h2{font-size:34px;color:var(--dark)}
+.title p{color:var(--muted);margin-top:8px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-card,.service,.contact-card,.form-card{background:#fff;border-radius:14px;padding:28px;box-shadow:0 8px 30px rgba(15,35,60,.08)}
+.about-card h3{color:var(--blue);font-size:24px;margin-bottom:12px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service{transition:.25s;border-top:4px solid var(--blue)}
+.service:hover{transform:translateY(-5px)}
+.icon{font-size:34px;margin-bottom:12px}
+.service h3{margin-bottom:8px;color:var(--dark)}
+.service p{color:var(--muted)}
+.job{background:#07101d;color:#fff}
+.job .title h2{color:#fff}.job .title p{color:#b9c7d8}
+.forms{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.form-card h3{margin-bottom:18px;color:var(--blue)}
+form{display:grid;gap:12px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #d7dee8;border-radius:7px;font-size:15px}
+textarea{min-height:100px}
+button{border:0;cursor:pointer}
+.notice{font-size:13px;color:var(--muted);margin-top:8px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery img{width:100%;height:210px;object-fit:cover;border-radius:12px;background:#111}
+.map-wrap{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.map{width:100%;min-height:360px;border:0;border-radius:14px}
+.contact-list{display:grid;gap:16px}
+.contact-list div{padding:15px;background:#f7f9fc;border-radius:9px}
+.contact-list b{display:block;color:var(--dark)}
+footer{background:#050a12;color:#b9c7d8;padding:30px 20px;text-align:center}
+footer strong{color:#fff}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#20c55a;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:26px;box-shadow:0 5px 18px rgba(0,0,0,.25);z-index:100}
+@media(max-width:850px){
+ nav{display:none;position:absolute;left:0;right:0;top:78px;background:#07101d;padding:20px;flex-direction:column;align-items:flex-start}
+ nav.open{display:flex}.menu{display:block}
+ .hero h1{font-size:38px}.about,.forms,.map-wrap{grid-template-columns:1fr}
+ .services,.gallery{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){.services,.gallery{grid-template-columns:1fr}.hero{min-height:540px}.brand span{font-size:17px}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="nav">
+  <a class="brand" href="#home">
+   <img src="images/logo.png" alt="KP Enterprises Logo">
+   <span>KP Enterprises<small>ATS CENTRE • VALUE-DRIVEN</small></span>
+  </a>
+  <div class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</div>
+  <nav>
+   <a href="#home">Home</a><a href="#about">About Company</a><a href="#testing">Vehicle Testing</a>
+   <a href="#jobcard">Job Card</a><a href="#documents">Documents</a><a href="#gallery">Gallery</a>
+   <a href="#contact">Contact</a>
+  </nav>
+ </div>
+</header>
+
+<section class="hero" id="home">
+ <div class="hero-inner">
+  <h1>Professional <span>Vehicle Testing</span> & Inspection Services</h1>
+  <p>Welcome to <b>KP Enterprises – ATS Centre</b>. We provide convenient, reliable and customer-focused vehicle testing services near Annangi, Andhra Pradesh.</p>
+  <a class="btn btn-primary" href="#jobcard">Create Job Card</a>
+  <a class="btn btn-outline" href="#contact">Contact Us</a>
+ </div>
+</section>
+
+<section id="about">
+ <div class="container">
+  <div class="title"><h2>About Company</h2><p>KP Enterprises – ATS Centre</p></div>
+  <div class="about">
+   <div class="about-card">
+    <h3>KP Enterprises</h3>
+    <p>KP Enterprises operates an ATS Centre focused on vehicle testing and inspection services. Our goal is to make the testing process simple, transparent and convenient for customers.</p>
+    <p style="margin-top:12px">We are located near <b>Annangi, Andhra Pradesh</b> and welcome customers for testing-related services.</p>
+   </div>
+   <div class="about-card">
+    <h3>Our Commitment</h3>
+    <p>✔ Customer-friendly service</p>
+    <p>✔ Organized testing process</p>
+    <p>✔ Clear documentation support</p>
+    <p>✔ Convenient job-card handling</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="testing">
+ <div class="container">
+  <div class="title"><h2>Vehicle Testing</h2><p>Services available at KP Enterprises ATS Centre</p></div>
+  <div class="services">
+   <div class="service"><div class="icon">🚗</div><h3>Vehicle Testing</h3><p>Vehicle testing and inspection services through an organized centre process.</p></div>
+   <div class="service"><div class="icon">🔍</div><h3>Vehicle Inspection</h3><p>Inspection support for vehicles and related testing documentation.</p></div>
+   <div class="service"><div class="icon">📋</div><h3>Job Card Creation</h3><p>Create and manage a job card for the testing process.</p></div>
+   <div class="service"><div class="icon">🔎</div><h3>Job Card Status</h3><p>Check the current status of a submitted job card.</p></div>
+   <div class="service"><div class="icon">📄</div><h3>Documents</h3><p>Access and download documents provided by the centre.</p></div>
+   <div class="service"><div class="icon">☎️</div><h3>Customer Support</h3><p>Contact our centre for service information and assistance.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="job" id="jobcard">
+ <div class="container">
+  <div class="title"><h2>Job Card Services</h2><p>Create a job card or check its status.</p></div>
+  <div class="forms">
+   <div class="form-card">
+    <h3>Job Card Creation</h3>
+    <form onsubmit="createJob(event)">
+     <input id="name" required placeholder="Customer Name">
+     <input id="phone" required placeholder="Mobile Number">
+     <input id="vehicle" required placeholder="Vehicle Number">
+     <select id="type" required><option value="">Select Vehicle Type</option><option>Car</option><option>Two Wheeler</option><option>Auto</option><option>Commercial Vehicle</option><option>Other</option></select>
+     <textarea id="remarks" placeholder="Remarks / Service Details"></textarea>
+     <button class="btn btn-primary" type="submit">Submit Job Card</button>
+    </form>
+    <p class="notice">Demo form: connect this form to your database/backend for real submissions.</p>
+   </div>
+   <div class="form-card">
+    <h3>Job Card Status</h3>
+    <form onsubmit="checkJob(event)">
+     <input id="jobno" required placeholder="Enter Job Card Number">
+     <button class="btn btn-primary" type="submit">Check Status</button>
+    </form>
+    <div id="status" style="margin-top:20px"></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="documents">
+ <div class="container">
+  <div class="title"><h2>Download Documents</h2><p>Important documents and forms</p></div>
+  <div class="services">
+   <div class="service"><div class="icon">📥</div><h3>Application Form</h3><p>Add your official application PDF here.</p><a class="btn btn-primary" href="#" onclick="alert('Upload the official PDF file here.');return false;">Download</a></div>
+   <div class="service"><div class="icon">📥</div><h3>Required Documents</h3><p>Add the official document checklist here.</p><a class="btn btn-primary" href="#" onclick="alert('Upload the official PDF file here.');return false;">Download</a></div>
+   <div class="service"><div class="icon">📥</div><h3>Customer Guidelines</h3><p>Add your centre guidelines or instructions here.</p><a class="btn btn-primary" href="#" onclick="alert('Upload the official PDF file here.');return false;">Download</a></div>
+  </div>
+ </div>
+</section>
+
+<section id="gallery">
+ <div class="container">
+  <div class="title"><h2>Gallery</h2><p>ATS Centre photos</p></div>
+  <div class="gallery">
+   <img src="images/logo.png" alt="KP Enterprises logo">
+   <img src="images/logo.png" alt="KP Enterprises logo">
+   <img src="images/logo.png" alt="KP Enterprises logo">
+  </div>
+  <p class="notice" style="text-align:center;margin-top:15px">Replace these placeholders with your actual centre, equipment and vehicle-testing photos.</p>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container">
+  <div class="title"><h2>Contact Us</h2><p>Visit or contact KP Enterprises ATS Centre</p></div>
+  <div class="map-wrap">
+   <div class="contact-card">
+    <div class="contact-list">
+     <div><b>Company</b>KP Enterprises – ATS Centre</div>
+     <div><b>📧 Email</b><a href="mailto:kpatscentre@gmail.com">kpatscentre@gmail.com</a></div>
+     <div><b>📞 Phone</b><a href="tel:+917842033433">7842033433</a></div>
+     <div><b>📍 Address</b>Near Annangi, Andhra Pradesh<br>M2P5+562 Annangi, Andhra Pradesh</div>
+     <div><b>📌 Coordinates</b>15.6853820, 80.0080180</div>
+    </div>
+    <br>
+    <a class="btn btn-primary" target="_blank" href="https://www.google.com/maps?q=15.6853820,80.0080180">Open Google Maps</a>
+   </div>
+   <iframe class="map" src="https://www.google.com/maps?q=15.6853820,80.0080180&z=15&output=embed" loading="lazy"></iframe>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <p><strong>KP Enterprises – ATS Centre</strong></p>
+ <p>Near Annangi, Andhra Pradesh • 7842033433 • kpatscentre@gmail.com</p>
+ <p style="margin-top:8px">© 2026 KP Enterprises. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp" target="_blank" href="https://wa.me/917842033433" aria-label="WhatsApp">◉</a>
+
+<script>
+function createJob(e){
+ e.preventDefault();
+ const n = Math.floor(100000 + Math.random()*900000);
+ alert("Job Card submitted successfully!\\nDemo Job Card No: KP"+n+"\\nConnect this form to a database for permanent records.");
+ e.target.reset();
+}
+function checkJob(e){
+ e.preventDefault();
+ const no=document.getElementById("jobno").value.trim();
+ document.getElementById("status").innerHTML =
+   '<div style="padding:15px;border-radius:8px;background:#eef6ff;color:#0b3d91"><b>Job Card:</b> '+no+'<br><b>Status:</b> Demo status — connect to your database for live status.</div>';
+}
+</script>
+</body>
+</html>
